@@ -1,9 +1,9 @@
 import socket
 
-HOST = "127.0.0.1"   # Change to server IP if on another machine
+HOST = "127.0.0.1"   
 PORT = 5001
 
-client_name = "Client of R. Gnanesh"   # <-- Change to your name
+client_name = "Client of R. Gnanesh"   
 client_number = int(input("Enter an integer (1–100): "))
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
