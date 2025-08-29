@@ -1,10 +1,10 @@
 import socket
 
 def main():
-    HOST = "0.0.0.0"      # Listen on all interfaces
-    PORT = 9999           # Port > 5000
-    server_name = "Server of Bhargav"   # <-- change to your name
-    server_number = 42    # Pick a number between 1 and 100
+    HOST = "0.0.0.0"      
+    PORT = 9999           
+    server_name = "Server of Bhargav"   
+    server_number = 42    
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
         server_socket.bind((HOST, PORT))
@@ -37,7 +37,7 @@ def main():
                     print(f"[SERVER] Invalid integer {client_num}. Closing server.")
                     return
 
-                # Display summary
+                
                 print("\n--- Communication Summary ---")
                 print(f"Client’s name    : {client_name}")
                 print(f"Server’s name    : {server_name}")
@@ -45,7 +45,7 @@ def main():
                 print(f"Server’s integer : {server_number}")
                 print(f"Sum              : {client_num + server_number}")
 
-                # Send response back
+                
                 reply = f"{server_name},{server_number}"
                 conn.sendall(reply.encode())
 
